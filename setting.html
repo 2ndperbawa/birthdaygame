@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Settings</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/setting_style.css">
+</head>
+<body>
+
+<div class="container">
+  <a href="index.html" style="position: absolute; top: 10px; right: 10px; z-index: 100; color: white; background: black; padding: 5px; border-radius: 5px;">Back</a>
+  <h1>Settings</h1>
+
+  <h2>House Dialogue</h2>
+  <textarea id="houseDialogue"></textarea>
+
+  <h2>City Dialogue</h2>
+  <textarea id="cityDialogue"></textarea>
+
+  <h2>Cake Dialogue 1</h2>
+  <textarea id="cakeDialogue1"></textarea>
+
+  <h2>Cake Dialogue 2</h2>
+  <textarea id="cakeDialogue2"></textarea>
+
+  <div class="image-setting">
+    <h2>Atin Image</h2>
+    <input type="file" id="atinImgInput" accept="image/*">
+    <img id="atinImgPreview" class="image-preview" src="/assets/atin_img.png">
+  </div>
+
+  <div class="image-setting">
+    <h2>Riefky Image</h2>
+    <input type="file" id="riefkyImgInput" accept="image/*">
+    <img id="riefkyImgPreview" class="image-preview" src="/assets/riefky_img.png">
+  </div>
+
+  <button onclick="saveSettings()">Save Settings</button>
+</div>
+
+<div id="cropModal">
+  <div class="modal-content">
+    <h2>Crop Image</h2>
+    <div>
+      <img id="imageToCrop" src="">
+    </div>
+    <button id="cropButton">Crop and Save</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+<script src="js/setting_script.js"></script>
+
+
+</body>
+</html>
